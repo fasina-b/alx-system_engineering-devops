@@ -1,2 +1,8 @@
 #!/bin/bash
-rsync -u --ignore-existing --include="*.html" --exclude="*" . ../
+for file in *.html; do
+    if [ ! -e "../$file" ]; then
+        cp "$file" "../$file"
+    elif [ "$file" -nt "../$file" ]; then
+        cp "$file" "../$file"
+    fi
+done
