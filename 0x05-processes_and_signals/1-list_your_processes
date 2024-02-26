@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Display the running processes in a hierarchical format
 
-ps auxf
+ps -auxf
